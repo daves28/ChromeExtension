@@ -1,21 +1,8 @@
-# TO DO
-Open a new tab to google pizza search
-Stop effects on previous page upon opening new tab (fade out music)
-Have the pizzas change randomly with the overlay (remove pizzas and re add)
-
-
 # ChromeExtension
-    "browser_action": {
-        "default_icon": "assets/pizza-icon.png",
-        "default_popup": "index.html"
-    },
-
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": true
-    }
-
-
+This extension plays That's Amore - Dean Martin while randomly flashing pizzas and color across the screen. It then opens a new tab to the Google Maps search page with the query 'pizza' for the user the view the pizza places nearest to them.
+ 
+# TO DO
+Fade out music
 
 /// if this will be used make sure to add getGeolocation() to the addEventListener callback function
 function getGeolocation(){

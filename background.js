@@ -29,3 +29,13 @@ chrome.browserAction.onClicked.addListener(function() {
             });
         });
     })
+
+// THIS IS FOR RECEIVING MESSAGE FROM CONTENT.JS RUNTIME TO OPEN NEW TAB AFTER INTERTION > 10
+chrome.runtime.onMessage.addListener(
+    function (request, sender, sendResponse) {
+        if (request.message === "createTab") {
+            chrome.tabs.create({
+                url: 'https://www.google.com/maps/search/pizza/'
+            })
+        }
+    });
