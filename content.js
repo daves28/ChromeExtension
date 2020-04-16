@@ -29,8 +29,10 @@ function start() {
     // setTimeout(backgroundMusic.pause, 10000);
 
     //Create the overlay
+    // var iterations = 0
     createOverlay();
-
+    let repeatOverlay = setInterval(createOverlay, 1000)
+    
     //Generate pizza images
     let topPos = 50
     let leftPos = 50
@@ -58,7 +60,7 @@ function start() {
                 break
         }
         pizzaImg.setAttribute('src', `${path}`)
-        pizzaImg.setAttribute('style', 'width:80px; height:80px;')
+        pizzaImg.setAttribute('style', 'width:110px; height:110px;')
         document.querySelector('html').appendChild(pizzaDiv)
         pizzaDiv.appendChild(pizzaImg)
         topPos += 130
@@ -80,7 +82,6 @@ function getRandomColor() {
 //Function to generate the overlay element with a new random color
 function createOverlay() {
     
-    
     //Check if current overlay exists
     if (document.getElementById('overlay') !== null) {
         overlayToDelete = document.getElementById('overlay')
@@ -93,8 +94,11 @@ function createOverlay() {
     overlay.setAttribute('id', 'overlay');
     overlay.setAttribute('style', `position: fixed; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: ${color}; opacity: 0.4; z-index: 500000; cursor: pointer;`)
     document.querySelector("html").appendChild(overlay);
-
-    setTimeout(createOverlay, 1000)
+    
+    // iterations ++
+    // if (iterations > 6) {
+    //     clearInterval(repeatOverlay)
+    // }
 }
 
 

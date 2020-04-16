@@ -1,3 +1,9 @@
+# TO DO
+Open a new tab to google pizza search
+Stop effects on previous page upon opening new tab (fade out music)
+Have the pizzas change randomly with the overlay (remove pizzas and re add)
+
+
 # ChromeExtension
     "browser_action": {
         "default_icon": "assets/pizza-icon.png",
