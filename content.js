@@ -96,7 +96,8 @@ function createPizza() {
     //Generate random position
     let topPos = Math.ceil(Math.random() * (1200-100) + 200);
     let leftPos = Math.ceil(Math.random() * (1200-100) + 200);
-
+    let pizzaHeight = 150
+    let pizzaWidth = 150
     //Create pizza DIVs and images at random places on screen, adding appropriate class, id and styling
     for (let i = 0; i<14; i++) {
         // create pizza div tags to hold pizza image tags
@@ -125,13 +126,15 @@ function createPizza() {
                 break
         }
         pizzaImg.setAttribute('src', `${path}`)
-        pizzaImg.setAttribute('style', 'width:180px; height:180px;')
+        pizzaImg.setAttribute('style', `width:${pizzaWidth}px; height:${pizzaHeight}px;`)
         document.querySelector('html').appendChild(pizzaDiv)
         pizzaDiv.appendChild(pizzaImg)
         // topPos += 130
         // leftPos += 170
         topPos = Math.ceil(Math.random() * (900 - 0) + 0 );
         leftPos = Math.ceil(Math.random() * (1500-100) + 100);
+        // pizzaHeight += 30
+        // pizzaWidth += 30
     }
     
     iterations ++
